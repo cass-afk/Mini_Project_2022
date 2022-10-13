@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>WHO ARE YOU</pattern>
+        <template>Hello! I am here to help you know more about  <bot name="name"/>!</template>
+    </category>
+    <category>
+        <pattern>hello</pattern>
+        <template>
+            Greetings from Karunya Institute of Technology and Sciences!
+            <image>https://media.glassdoor.com/sqll/362888/karunya-university-squarelogo-1548680682491.png</image> What might your name be?
+        </template>
+    </category>
+    <category>
+        <pattern>_ name is * *</pattern>
+        <template>
+            Welcome, <set name="firstname"><star index="2"/></set> <set name="lastname"><star index="3"/></set>!
+            What would you like to know?
+            <button>
+                <text>About us</text>
+                <postback>About</postback>
+            </button>
+            <button>
+                <text>Admissions</text>
+                <postback>Admission</postback>
+            </button>
+            <button>
+                <text>Scholarships</text>
+                <postback>scholar</postback>
+            </button>
+            <button>
+                <text>Research</text>
+                <postback>research</postback>
+            </button>
+            <button>
+                <text>Careers</text>
+                <postback>career</postback>
+            </button>
+            <button>
+                <text>Apply Now!</text>
+                <postback>application</postback>
+            </button>
+            <button>
+                <text>Reach Us</text>
+                <postback>contact</postback>
+            </button>
+        </template>
+    </category>
+    <category>
+        <pattern>I AM * *</pattern>
+        <template><srai>name is <star index="1"/> <star index="2"/></srai></template>
+    </category>
+    <category>
+        <pattern>tell me about _</pattern>
+        <template>Please select an option
+        <button>
+                <text>About us</text>
+                <postback>About</postback>
+            </button>
+            <button>
+                <text>Admissions</text>
+                <postback>Admission</postback>
+            </button>
+            <button>
+                <text>Scholarships</text>
+                <postback>scholar</postback>
+            </button>
+            <button>
+                <text>Research</text>
+                <postback>research</postback>
+            </button>
+            <button>
+                <text>Careers</text>
+                <postback>career</postback>
+            </button>
+            <button>
+                <text>Apply Now!</text>
+                <postback>application</postback>
+            </button>
+            <button>
+                <text>Reach Us</text>
+                <postback>contact</postback>
+            </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>back</pattern>
+        <template><srai>_ name is <get name = "firstname"/> <get name = "lastname"/></srai></template>
+    </category>
+    
+     <category>
+        <pattern>application</pattern>
+        <template>
+            Built on the vision of Karunya Institute of Technology and Sciences, the Academic Research programme aims to provide suitable ambience, infrastructure and policies in order to facilitate the scholars to find solutions to human problems in areas relating to water, food, healthcare and energy through scientific, social and technological research. This has essentially necessitated the growth of interdisciplinary research.
+            <br/>Click below to know more about the research at Karunya.
+
+            <link>
+                <text>Apply Now!.</text>
+                <url>https://eduserve.karunya.edu/online/admissions/eoi.aspx</url>
+            </link>
+        <button>
+            <text>Go back</text>
+            <postback>back</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>contact</pattern>
+        <template>
+            Address : Karunya Nagar <br/>Coimbatore - 641 114<br/>Tamil Nadu<br/>India.
+            <br/>Toll Free No: 1800 425 4300
+            <br/>Email : admissions@karunya.edu
+            <link>
+                <text>Contact Now.</text>
+                <url>https://admissions.karunya.edu/contact-us</url>
+            </link>
+        <button>
+            <text>Go back</text>
+            <postback>back</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>career</pattern>
+        <template>
+            Karunya demands committed and dynamic faculty members at all levels. We need who will understand the Vision and Mission of Karunya and work for the welfare of the Institution and students.<br/>
+            Click below to know more about careers at Karunya.
+            <link>
+                <text>Careers</text>
+                <url>https://www.karunya.edu/careers</url>
+            </link>
+        <button>
+            <text>Go back</text>
+            <postback>back</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>About</pattern>
+        <template>
+            Karunya Institute of Technology and Sciences, was founded with the noble vision <br/>to raise professionals <br/> and leaders of high academic calibre and unblemished character,<br/> nurtured with a strong motivation and<br/> commitment to serve humanity. <br/>The institution is the fulfillment of the vision of its founders <br/>Late Dr. D. G. S. Dhinakaran<br/> and the present Chancellor <br>Dr. Paul Dhinakaran.</br>
+        <button>
+            <text>Go back</text>
+            <postback>back</postback>
+        </button>
+        </template>
+    </category>
+    <category> <!--  MENU-->
+        <pattern>Admission</pattern>
+        <template>Which course would you like to know about?
+        <button>
+            <text>Engineering and Technology</text>
+            <postback>engineering</postback>
+        </button>
+        <button>
+            <text>Agriculture</text>
+            <postback>agriculture</postback>
+        </button>
+        <button>
+            <text>Science, Arts, Media and Management</text>
+            <postback>science</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>back</postback>
+        </button>
+        </template>
+    </category><!-- SCHOOL OF ENGINEERING AND TECHNOLOGY  -->
+    <category>
+        <pattern>engineering</pattern>
+        <template>Karunya offers various courses for Engineering.<br/>Please click on the following link to explore the different proragms offered.<br/>
+        <link>
+            <text>click for offered programs.</text>
+            <url>https://admissions.karunya.edu/#ugprograms</url>
+        </link>
+        <button>
+            <text>Check Eligibility</text>
+            <postback>engelig</postback>
+        </button>
+        <button>
+            <text>Scholarships</text>
+            <postback>scholar</postback>
+        </button>
+        <button>
+            <text>Admission</text>
+            <postback>hello</postback>
+        </button>
+        <button>
+            <text>Placements</text>
+            <postback>engplace</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>Admission</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>engelig</pattern>
+        <template>
+            Explore the School of Engineering and Technology in Karunya.
+            
+            Refer to the links below for the different Programs offered by Karunya.
+            <link><text>Programs offered by Department of Computer Science and Engineering</text><url>https://www.karunya.edu/cse/academics/programmes</url></link>
+            
+            <link>
+                <text>Explore the Department of Aerospace Engineering.</text>
+                <url>https://www.karunya.edu/aerospace/programmes</url>
+            </link>
+            <link><text>Explore the Department of Civil Engineering.</text><url>https://www.karunya.edu/civil/programme</url></link>
+             <link><text>Explore the Department of Electrical and Electronics Engineering.</text><url>https://www.karunya.edu/eee/courses</url></link>
+            <link><text>Explore the Department of Electronics and Communication Engineering.</text><url>https://www.karunya.edu/ece</url></link>
+            <link><text>Explore the Department of Robotics Engineering.</text><url>https://www.karunya.edu/robotics/Programmes-offered</url></link>
+            <link><text>Explore the Department of Mechanical Engineering</text><url>https://www.karunya.edu/mechanical/academics</url></link>
+            <link><text>Explore the Department of Biomedical Engineering.</text><url>https://www.karunya.edu/biomedical/academics</url></link>
+            
+            <button>
+            <text>Go back</text>
+            <postback>science</postback>
+        </button>
+        </template>
+    </category> 
+    <category>
+        <pattern>engplace</pattern>
+        <template>
+            Karunya has a laudable record of placement of its final year students and graduates.<br/>
+            The Department of Computer Science and Engineering has an excellent record of placements for both UG and PG students. Prominent companies like Cape Gemini, Cognizant Technology Solutions, Hewlett Packard, IBM INDIA Pvt. Ltd., Infosys, Wipro, Zoho Corporation, IBS Software Services, Odessa Technologies, Tata Elxsi Ltd. etc. recruit our students for their outstanding performance. <br/>As per the recent statistics, about 90% of eligible final year students, who seek a placement, are placed through campus interviews in reputed organizations.
+            <link>
+                <text>Click to know more</text>
+                <url>https://www.karunya.edu/cse/placements/placement</url></link>
+            <button>
+            <text>Go back</text>
+            <postback>engineering</postback>
+        </button>
+        </template>
+    </category>
+    
+    
+    <category>
+        <pattern>scholar</pattern>
+        <template>
+            Karunya provides scholarships for the following programmes:
+            <button>
+            <text>BTECH</text>
+            <postback>btechschol</postback>
+            </button>
+            
+            <button>
+            <text>MTECH</text>
+            <postback>mtechschol</postback>
+            </button>
+            
+            <button>
+            <text>B.Com B.A and B.Sc.</text>
+            <postback>comartsschol</postback>
+            </button>
+            
+            <button>
+            <text>M.B.A</text>
+            <postback>mbaschol</postback>
+            </button>
+            
+            <button>
+            <text>Ph.D</text>
+            <postback>phdschol</postback>
+            </button>
+            <button>
+            <text>Go back</text>
+            <postback>Admission</postback>
+        </button>
+        </template>
+    </category><!--  SCHOLARSHIPS-->
+    <category>
+        <pattern>mtechschol</pattern>
+        <template>
+            <image>https://github.com/cass-afk/Mini_Project_2022/blob/main/MTECH_SCHOL.JPG?raw=true</image>
+        <link>
+                <text>Click to know more</text>
+                <url>https://admissions.karunya.edu/scholarships</url>
+            </link>
+        </template>
+    </category>
+    <category>
+        <pattern>btechschol</pattern>
+        <template>
+            Karunya provides 4 types of scholaships for the BTECH program.
+            <button>
+            <text>Merit Based</text>
+            <postback>btechscholmerit</postback>
+            </button>
+            <button>
+            <text>Young Innovators and Inventors</text>
+            <postback>btechscholinn</postback>
+            </button>
+            <button>
+            <text>JEE Main Qualified Candidates</text>
+            <postback>btechscholjee</postback>
+            </button>
+            <button>
+            <text>Lateral Entry</text>
+            <postback>btechschollateral</postback>
+            </button>
+            <link>
+                <text>Click to know more</text>
+                <url>https://admissions.karunya.edu/scholarships</url>
+            </link>
+        </template>
+        
+    </category>
+    <category>
+        <pattern>btechscholmerit</pattern>
+        <template>
+            Criteria for the scholarship is:
+            <image>https://github.com/cass-afk/Mini_Project_2022/blob/main/BTECH-MERIT.JPG?raw=true</image>
+        <link>
+                <text>Click to know more</text>
+                <url>https://admissions.karunya.edu/scholarships</url>
+            </link>
+        </template>    
+    </category>
+    <category>
+        <pattern>btechscholinn</pattern>
+        <template>
+            Criteria for the scholarship is:
+            <image>https://github.com/cass-afk/Mini_Project_2022/blob/main/BTECH_INOV.JPG?raw=true</image>
+        
+        <link>
+                <text>Click to know more</text>
+                <url>https://admissions.karunya.edu/scholarships</url>
+            </link>
+        </template>
+    </category>
+    <category>
+        <pattern>btechscholjee</pattern>
+        <template>
+            Criteria for the scholarship is:
+            <image>https://github.com/cass-afk/Mini_Project_2022/blob/main/BTECH_JEE.JPG?raw=true</image>
+        <link>
+                <text>Click to know more</text>
+                <url>https://admissions.karunya.edu/scholarships</url>
+            </link>
+        </template>    
+    </category>
+    <category>
+        <pattern>btechschollateral</pattern>
+        <template>
+            Criteria for the scholarship is:
+            <image>https://github.com/cass-afk/Mini_Project_2022/blob/main/BTECH_LATERAL.JPG?raw=true</image>
+        
+        <link>
+                <text>Click to know more</text>
+                <url>https://admissions.karunya.edu/scholarships</url>
+            </link>
+        </template>
+    </category>
+    <category>
+        <pattern>comartsschol</pattern>
+        <template>
+            Criteria for the scholarship is:
+            <image>https://github.com/cass-afk/Mini_Project_2022/blob/main/BCOM.JPG?raw=true</image>
+        <link>
+                <text>Click to know more</text>
+                <url>https://admissions.karunya.edu/scholarships</url>
+            </link>
+        </template>    
+    </category>
+    <category>
+        <pattern>mbaschol</pattern>
+        <template>
+            Criteria for the scholarship is:
+            <image>https://github.com/cass-afk/Mini_Project_2022/blob/main/MBA.JPG?raw=true</image>
+        
+        <link>
+                <text>Click to know more</text>
+                <url>https://admissions.karunya.edu/scholarships</url>
+            </link>
+        </template>
+    </category>
+    <category>
+        <pattern>phdschol</pattern>
+        <template>
+            Scholars with 75% or more marks in the qualifying examinations may be considered for Research Associateship / Research Assistantship as per norms/rules of KITS.
+        <link>
+                <text>Click to know more</text>
+                <url>https://admissions.karunya.edu/scholarships</url>
+            </link>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>agriculture</pattern>
+        <template>The Agricultural Science programs are designed to develop skills and explore career areas in agriculture and allied fields. <br/>The instructional program includes topics in animal, plant, environmental, soil, food sciences, horticulture, landscaping and agricultural engineering. <br/>Students will acquire skills necessary to meet their individual career objectives, occupational skills for gainful employment and leadership abilities to work effectively in groups and as a team. 
+            <link><text>Click to know more.</text><url>https://www.karunya.edu/agriculture</url></link>
+            <link><text>Click to know about the courses offered.</text><url>https://www.karunya.edu/agriculture/courses</url></link>
+            <image>https://www.karunya.edu/img/agriculture/banner1.jpg.pagespeed.ce.riGIYpb0B0.jpg</image>
+            <button>
+            <text>Check Eligibility</text>
+            <postback>agrielig</postback>
+            </button>
+            <button>
+            <text>Internships</text>
+            <postback>agriintern</postback>
+            </button>
+            <button>
+            <text>Placements</text>
+            <postback>agriplace</postback>
+            </button>
+            <button>
+            <text>Scholarships</text>
+            <postback>scholar</postback>
+        </button>
+            <button>
+            <text>Go back</text>
+            <postback>Admission</postback>
+        </button>
+        
+        </template>
+    </category><!-- SCHOOL OF AGRICULTURE  -->
+    <category>
+        <pattern>agrielig</pattern>
+        <template>
+            Full time 4 years program:<br/>
+            +2 / PUC with Physics, Chemistry, Mathematics and Biology or Physics, Chemistry, Biology with Biochemistry / Biotechnology / Microbiology / Home Science / Computer Science with 50% aggregate of all four subjects
+            <button>
+            <text>Go back</text>
+            <postback>agriculture</postback>
+        </button>
+        </template>
+    </category> 
+    <category>
+        <pattern>agriintern</pattern>
+        <template>
+            Karunya has a laudable record of placement of its final year students and graduates. The students are given the opportunity to work in collaboration with Industries, National, International Organisations and Research Centres to execute their programmes. These opportunities have resulted in placement in companies where they undergo Internship and In-Plant training. Our graduates are also placed in leading companies such as Amazon, Healthplix, Roots irrigation, Kilofarms etc. A good number of graduates have become entrepreneurs in Tamil Nadu.
+            <link>
+                <text>Click to know more</text>
+                <url>https://www.karunya.edu/agriculture/placements</url> </link>
+            <button>
+            <text>Go back</text>
+            <postback>agriculture</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>agriplace</pattern>
+        <template>
+            Karunya has a laudable record of placement of its final year students and graduates. The students are given the opportunity to work in collaboration with Industries, National, International Organisations and Research Centres to execute their programmes. These opportunities have resulted in placement in companies where they undergo Internship and In-Plant training. Our graduates are also placed in leading companies such as Amazon, Healthplix, Roots irrigation, Kilofarms etc. A good number of graduates have become entrepreneurs in Tamil Nadu.
+            <link>
+                <text>Click to know more</text>
+                <url>https://www.karunya.edu/agriculture/placements</url> </link>
+            <button>
+            <text>Go back</text>
+            <postback>agriculture</postback>
+        </button>
+        </template>
+    </category>
+    
+    <category>
+        <pattern>science</pattern>
+        <template>
+            <button>
+            <text>Check Eligibility</text>
+            <postback>scielig</postback>
+            </button>
+            <button>
+            <text>Placements</text>
+            <postback>sciiplace</postback>
+            </button>
+            <button>
+            <text>Scholarships</text>
+            <postback>scholar</postback>
+        </button>
+            <button>
+            <text>Go back</text>
+            <postback>Admission</postback>
+        </button>
+        <link><text>Click to know about the School of Sciences.</text><url>https://www.karunya.edu/schools</url></link>
+            
+        </template>
+    </category><!-- SCHOOL OF SCIENCE  -->
+    <category>
+        <pattern>scielig</pattern>
+        <template>
+            Refer to the link below for the different Programs offered by Karunya.
+            <link>
+                <text>Programs offered by School of Applied Chemistry.</text>
+                <url>https://www.karunya.edu/chemistry/academics</url>
+            </link>
+            <link><text>Programs offered by School of Applied Physics.</text><url>https://www.karunya.edu/physics/academicsprogrammes</url></link>
+             <link><text>Programs offered by School of Nano Sciences.</text><url>https://www.karunya.edu/nanotechnology/academics/</url></link>
+            <link><text>Programs offered by School of Digital Sciences.</text><url>https://www.karunya.edu/digitalsciences/academics</url></link>
+            <link><text>Programs offered by School of Commerce and International Trade.</text><url>karunya.edu/commerce/academics</url></link>
+            <link><text>Programs offered by School of Management Studies.</text><url>https://www.karunya.edu/mba/programmesoff</url></link>
+            <button>
+            <text>Go back</text>
+            <postback>science</postback>
+        </button>
+        </template>
+    </category> 
+    <category>
+        <pattern>sciiplace</pattern>
+        <template>
+            Karunya has a laudable record of placement of its final year students and graduates.
+            Click below to explore the School of Science.
+            <link>
+                <text>Click to know more</text>
+                <url>https://www.karunya.edu/schools</url> </link>
+            <button>
+            <text>Go back</text>
+            <postback>science</postback>
+        </button>
+        </template>
+    </category>
+    
+</aiml>
