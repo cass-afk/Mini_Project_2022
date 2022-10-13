@@ -1,2 +1,2 @@
-# Mini_Project_2022
-A repository for my mini project.
+# INTERACTIVE CHATBOT FOR UNIVERSITY USING AIML
+Mini Project on the creation of a chatbot for a university using AIML. This is done with the help of pandorabots. 
