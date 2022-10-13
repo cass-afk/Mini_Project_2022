@@ -5,6 +5,13 @@
         <template>Hello! I am here to help you know more about  <bot name="name"/>!</template>
     </category>
     <category>
+        <pattern>*</pattern>
+        <template>
+            Greetings from Karunya Institute of Technology and Sciences!
+            <image>https://media.glassdoor.com/sqll/362888/karunya-university-squarelogo-1548680682491.png</image> What might your name be?
+        </template>
+    </category>
+    <category>
         <pattern>hello</pattern>
         <template>
             Greetings from Karunya Institute of Technology and Sciences!
@@ -87,6 +94,23 @@
     <category>
         <pattern>back</pattern>
         <template><srai>_ name is <get name = "firstname"/> <get name = "lastname"/></srai></template>
+    </category>
+    
+    <category>
+        <pattern>research</pattern>
+        <template>
+            Built on the vision of Karunya Institute of Technology and Sciences, the Academic Research programme aims to provide suitable ambience, infrastructure and policies in order to facilitate the scholars to find solutions to human problems in areas relating to water, food, healthcare and energy through scientific, social and technological research. This has essentially necessitated the growth of interdisciplinary research.
+            <br/>Click below to know more about the research at Karunya.
+
+            <link>
+                <text>Research in Karunya</text>
+                <url>https://www.karunya.edu/research</url>
+            </link>
+        <button>
+            <text>Go back</text>
+            <postback>back</postback>
+        </button>
+        </template>
     </category>
     
      <category>
@@ -303,10 +327,15 @@
             <text>Lateral Entry</text>
             <postback>btechschollateral</postback>
             </button>
+            <button>
+            <text>Go back</text>
+            <postback>scholar</postback>
+        </button>
             <link>
                 <text>Click to know more</text>
                 <url>https://admissions.karunya.edu/scholarships</url>
             </link>
+            
         </template>
         
     </category>
