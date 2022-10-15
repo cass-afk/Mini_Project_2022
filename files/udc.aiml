@@ -16,10 +16,11 @@
         <template>
             Greetings from Karunya Institute of Technology and Sciences!
             <image>https://media.glassdoor.com/sqll/362888/karunya-university-squarelogo-1548680682491.png</image> What might your name be?
+            <think><set name="topic">NAME</set></think>
         </template>
     </category>
     <category>
-        <pattern>_ name is * *</pattern>
+        <pattern>_ name is *</pattern>
         <template>
             Welcome, <set name="firstname"><star index="2"/></set> <set name="lastname"><star index="3"/></set>!
             What would you like to know?
@@ -53,10 +54,12 @@
             </button>
         </template>
     </category>
+    <topic name="NAME">
     <category>
-        <pattern>I AM * *</pattern>
+        <pattern>* *</pattern>
         <template><srai>name is <star index="1"/> <star index="2"/></srai></template>
     </category>
+    </topic>
     <category>
         <pattern>tell me about _</pattern>
         <template>Please select an option
@@ -90,12 +93,12 @@
             </button>
         </template>
     </category>
-    
+
     <category>
         <pattern>back</pattern>
         <template><srai>_ name is <get name = "firstname"/> <get name = "lastname"/></srai></template>
     </category>
-    
+    <!--  RESEARCH-->
     <category>
         <pattern>research</pattern>
         <template>
@@ -112,7 +115,7 @@
         </button>
         </template>
     </category>
-    
+    <!--  APPLICATION-->
      <category>
         <pattern>application</pattern>
         <template>
@@ -123,13 +126,14 @@
                 <text>Apply Now!.</text>
                 <url>https://eduserve.karunya.edu/online/admissions/eoi.aspx</url>
             </link>
+            
         <button>
             <text>Go back</text>
             <postback>back</postback>
         </button>
         </template>
     </category>
-    
+    <!--  CONTACT-->
     <category>
         <pattern>contact</pattern>
         <template>
@@ -146,6 +150,7 @@
         </button>
         </template>
     </category>
+    <!--  CAREER-->
     <category>
         <pattern>career</pattern>
         <template>
@@ -161,7 +166,7 @@
         </button>
         </template>
     </category>
-    
+    <!--  ABOUT-->
     <category>
         <pattern>About</pattern>
         <template>
@@ -172,7 +177,8 @@
         </button>
         </template>
     </category>
-    <category> <!--  MENU-->
+    <!--  MENU-->
+    <category>
         <pattern>Admission</pattern>
         <template>Which course would you like to know about?
         <button>
@@ -186,6 +192,10 @@
         <button>
             <text>Science, Arts, Media and Management</text>
             <postback>science</postback>
+        </button>
+        <button>
+            <text>Fee Structure</text>
+            <postback>fee</postback>
         </button>
         <button>
             <text>Go back</text>
@@ -516,12 +526,12 @@
             <link>
                 <text>Programs offered by School of Applied Chemistry.</text>
                 <url>https://www.karunya.edu/chemistry/academics</url>
-            </link>
-            <link><text>Programs offered by School of Applied Physics.</text><url>https://www.karunya.edu/physics/academicsprogrammes</url></link>
-             <link><text>Programs offered by School of Nano Sciences.</text><url>https://www.karunya.edu/nanotechnology/academics/</url></link>
-            <link><text>Programs offered by School of Digital Sciences.</text><url>https://www.karunya.edu/digitalsciences/academics</url></link>
-            <link><text>Programs offered by School of Commerce and International Trade.</text><url>karunya.edu/commerce/academics</url></link>
-            <link><text>Programs offered by School of Management Studies.</text><url>https://www.karunya.edu/mba/programmesoff</url></link>
+            </link><br/>
+            <br/><link><text>Programs offered by School of Applied Physics.</text><url>https://www.karunya.edu/physics/academicsprogrammes</url></link>
+            <br/><link><text>Programs offered by School of Nano Sciences.</text><url>https://www.karunya.edu/nanotechnology/academics/</url></link>
+            <br/><link><text>Programs offered by School of Digital Sciences.</text><url>https://www.karunya.edu/digitalsciences/academics</url></link>
+            <br/><link><text>Programs offered by School of Commerce and International Trade.</text><url>karunya.edu/commerce/academics</url></link>
+            <br/><link><text>Programs offered by School of Management Studies.</text><url>https://www.karunya.edu/mba/programmesoff</url></link>
             <button>
             <text>Go back</text>
             <postback>science</postback>
@@ -543,4 +553,195 @@
         </template>
     </category>
     
+    <category>
+        <pattern>fee</pattern>
+        <template>Fee Structure for:
+            <button>
+            <text>Indian Students</text>
+            <postback>indstu</postback>
+            </button>
+            <button>
+            <text>International Students</text>
+            <postback>intstu</postback>
+            </button>
+            <button>
+            <text>Go back</text>
+            <postback>Admission</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>indstu</pattern>
+        <template>
+            For which program would you like to know the fee structure?
+            <button>
+            <text>UNDER GRADUATE PROGRAMME</text>
+            <postback>ugfee</postback>
+        </button>
+        <button>
+            <text>POST GRADUATE PROGRAMME</text>
+            <postback>pgfee</postback>
+        </button>
+        <button>
+            <text>RESEARCH PROGRAMME</text>
+            <postback>resfree</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>fee</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>ugfee</pattern>
+        <template>
+            For Btech, Bsc and Agri programmes.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/IND/All%20B.Tech%2C%20B.Sc%20Agri.pdf</url>
+            </link>
+            <br/>
+            For Btech(Lateral Entry).
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/IND/B.Tech%20Lateral%20%26%20Transfer.pdf</url>
+            </link>
+            <br/>
+            For Btech(Lateral Entry).
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/IND/B.Tech%20Lateral%20%26%20Transfer.pdf</url>
+            </link>
+            <br/>
+            <button>
+            <text>Go back</text>
+            <postback>indstu</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>pgfee</pattern>
+        <template>
+            For MTech programmes.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/IND/All%20M.Tech.pdf</url></link>
+            <br/>
+            For Other PG programmes.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/IND/Other%20PG.pdf</url></link>
+            <br/>
+            For MBA programmes.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/IND/MBA.pdf</url></link>
+            <br/>
+            <button>
+            <text>Go back</text>
+            <postback>indstu</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>resfee</pattern>
+        <template>
+            For MTech programmes.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/IND/Ph.D%20Fees.pdf</url></link>
+            <button>
+            <text>Go back</text>
+            <postback>indstu</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>intstu</pattern>
+        <template>
+            For which program would you like to know the fee structure?
+            <button>
+            <text>UNDER GRADUATE PROGRAMME</text>
+            <postback>ugfeeint</postback>
+        </button>
+        <button>
+            <text>POST GRADUATE PROGRAMME</text>
+            <postback>pgfeeint</postback>
+        </button>
+        <button>
+            <text>RESEARCH PROGRAMME</text>
+            <postback>resfreeint</postback>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>fee</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>ugfeeint</pattern>
+        <template>
+            For Btech, Bsc and Agri programmes.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/B.Tech%20All%20Course%20NRI%20%26%20SAARC.pdf</url></link>
+            <br/>
+            For Btech(Lateral Entry).
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/All%20B.Tech%20(Lateral%20%26%20Transfer)%20NRI%20%26%20SAARC.pdf</url></link>
+            <br/>
+            B.Sc. Optometry.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/B.Sc.Optometry%20-%20NRI.pdf</url></link>
+            <br/>B.A.Criminology.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/B.A.%20Criminology%20-%20NRI.pdf</url>
+            </link>
+            <br/>B.Sc.Information Security and B.Com.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/B.Sc.%20Information%20Security%2C%20B.Com%2C%20BBA%20NRI.pdf</url>
+            </link>
+            <button>
+            <text>Go back</text>
+            <postback>indstu</postback>
+        </button>
+        </template>
+    </category>
+    <category>
+        <pattern>pgfeeint</pattern>
+        <template>
+            For Mtech programmes.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/All%20M.Tech%20NRI.pdf</url></link>
+            <br/>
+            For MBA programmes.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/MBA%20NRI.pdf</url></link>
+            <br/>
+            M.Sc. Forensic Science, M.Sc. (Agriculture) and (Horticulture)
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/M.Sc.Forensic%20Science%2C%20Agri%2C%20Horti%20NRI.pdf</url></link>
+            <br/>M.Sc.Chemistry, M.Sc.Physics, M.Sc.Criminology, M.Sc.Food Science Technology
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/M.Sc.Physic%2C%20Chemistry%2C%20Food%2C%20Biotech%2C%20Criminology%20NRI.pdf</url>
+            </link>
+            <br/>M.Sc. Information Security and Digital Forensics and M.Sc. Clinical Psychology
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/M.Sc.ISDF%2C%20Clinical%20PsychologyNRI.pdf</url>
+            </link>
+            <button>
+            <text>Go back</text>
+            <postback>intstu</postback>
+        </button>
+        </template>
+    </category>
 </aiml>
