@@ -5,7 +5,7 @@
         <template>Hello! I am here to help you know more about  <bot name="name"/>!</template>
     </category>
     <category>
-        <pattern>*</pattern>
+        <pattern>^</pattern>
         <template>
             Greetings from Karunya Institute of Technology and Sciences!
             <image>https://media.glassdoor.com/sqll/362888/karunya-university-squarelogo-1548680682491.png</image> What might your name be?
@@ -55,6 +55,10 @@
         </template>
     </category>
     <topic name="NAME">
+    <category>
+        <pattern>I AM * *</pattern>
+        <template><srai>name is <star index="1"/> <star index="2"/></srai></template>
+    </category>
     <category>
         <pattern>* *</pattern>
         <template><srai>name is <star index="1"/> <star index="2"/></srai></template>
@@ -245,7 +249,7 @@
                 <url>https://www.karunya.edu/aerospace/programmes</url>
             </link>
             <link><text>Explore the Department of Civil Engineering.</text><url>https://www.karunya.edu/civil/programme</url></link>
-             <link><text>Explore the Department of Electrical and Electronics Engineering.</text><url>https://www.karunya.edu/eee/courses</url></link>
+            <br/><link><text>Explore the Department of Electrical and Electronics Engineering.</text><url>https://www.karunya.edu/eee/courses</url></link>
             <link><text>Explore the Department of Electronics and Communication Engineering.</text><url>https://www.karunya.edu/ece</url></link>
             <link><text>Explore the Department of Robotics Engineering.</text><url>https://www.karunya.edu/robotics/Programmes-offered</url></link>
             <link><text>Explore the Department of Mechanical Engineering</text><url>https://www.karunya.edu/mechanical/academics</url></link>
@@ -254,7 +258,7 @@
             <button>
             <text>Go back</text>
             <postback>science</postback>
-        </button>
+            </button>
         </template>
     </category> 
     <category>
@@ -565,6 +569,10 @@
             <postback>intstu</postback>
             </button>
             <button>
+            <text>Hostel/ Accomadations</text>
+            <postback>hostel</postback>
+        </button>
+            <button>
             <text>Go back</text>
             <postback>Admission</postback>
         </button>
@@ -585,6 +593,10 @@
         <button>
             <text>RESEARCH PROGRAMME</text>
             <postback>resfree</postback>
+        </button>
+        <button>
+            <text>HOSTEL / ACCOMADATIONS</text>
+            <postback>hostel</postback>
         </button>
         <button>
             <text>Go back</text>
@@ -673,9 +685,14 @@
             <postback>resfreeint</postback>
         </button>
         <button>
+            <text>HOSTEL / ACCOMADATIONS</text>
+            <postback>hostel</postback>
+        </button>
+        <button>
             <text>Go back</text>
             <postback>fee</postback>
         </button>
+        
         </template>
     </category>
     <category>
@@ -744,4 +761,56 @@
         </button>
         </template>
     </category>
+    <category>
+        <pattern>resfeeint</pattern>
+        <template>
+            For Research programmes.
+            <link>
+                <text>Click for the Fee Structure.</text>
+                <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/Ph.D%20NRI.pdf</url></link>
+            <button>
+            <text>Go back</text>
+            <postback>intstu</postback>
+        </button>
+        </template>
+    </category>
+
+<category>
+    <pattern>hostel</pattern>
+    <template>
+        Click below to view the Hostel Infrastrcture:
+        <link>
+            <text>Hostel Infrastructre</text>
+            <url></url>
+        </link>
+        <br/>
+        Hostel Fee Structure for:
+        <button>
+            <text>For Indian Students</text>
+            <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/IND/Hostel%20Fee%20Structure%202022-23%20INDIAN.pdf</url>
+            <think><set name="hostel">IND</set></think>
+            </button>
+        <button>
+            <text>For International Students</text>
+            <url>https://admissions.karunya.edu/sites/admissions/files/uploads/downloads/2022/NRI/Hostel%20Fee%20Structure%202022-23%20NRI.pdf</url>
+            <think><set name="hostel">INT</set></think>
+        </button>
+        <button>
+            <text>Go back</text>
+            <postback>Admission</postback>
+        </button>
+    </template>
+</category>
+<category>
+    <pattern>_ BYE</pattern>
+    <template>
+        Good bye, Hope to see you as a Karunyan soon!
+    </template>
+</category>
+<category>
+    <pattern>BYE</pattern>
+    <template>
+        <srai>_ BYE</srai>
+    </template>
+</category>
 </aiml>
